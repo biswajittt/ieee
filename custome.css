@@ -23,10 +23,19 @@
 }
 .main-nav .ticket img {
   margin-right: 23px;
-  width: 91px;
-  height: 87px;
+  width: 4rem;
+  height: 4.2rem;
 }
-
+.nit-agartala-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: #707070;
+}
+@media (max-width: 1200px) {
+  .nit-agartala-text {
+    display: none;
+  }
+}
 .slideshow-container {
   max-width: 1000px;
   position: relative;
