@@ -490,6 +490,26 @@
 			/* flex-wrap: wrap; */
 		}
 	</style>
+	<style>
+		.new-notification {
+			width: 36px;
+			font-size: 12px;
+			position: absolute;
+			right: 305px;
+			top: -8px;
+			text-align: center;
+			border-radius: 25px;
+			transform: rotate(7deg);
+			background-color: #ff6600;
+			color: #ffffff;
+		}
+
+		.notification {
+
+			position: relative;
+		}
+	</style>
+
 </head>
 
 <body class="body-wrapper">
@@ -560,7 +580,12 @@
 					<li class="nav-item">
 						<a class="nav-link" href="tutorial.html">Tutorial</a>
 					</li>
-
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Gallery</a>
+					</li>
 				</ul>
 				<a href="http://www.nita.ac.in" class="ticket" target="_blank">
 					<img src="images/icon/nitagartala_logo.png" alt="ticket">
@@ -639,40 +664,42 @@
 						<font color="red">Registration Details</font>
 					</a></b></marquee>
 		</p> -->
-		<p>
-			<marquee bgcolor="powderblue" onmouseover="this.stop();" onmouseout="this.start()">
-				<!-- <a href="https://meet.google.com/yry-rkzn-cbq">
-					<font color="red"><b>>>> Link for the Inaugural Session >>></b></font>
-				</a> -->
-				&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
-					<font color="blue"> 2024 IEEE SILCHAR SUBSECTION CONFERENCE</font>
-				</a>&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
-					<font color="red"> <b>at National Institute of Technology, Agartala</b></font>
-				</a>&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
-					<font color="blue"><b>Technical Co-Sponsorship: IEEE KolkataSection</b></font>
-				</a>
-				<!-- &nbsp;&nbsp;&nbsp;&nbsp;<b>
-					<a href="http://www.ieeesilcon.org.in/registration.html">
-						<font color="red">Registration Details</font>
-					</a></b> -->
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="./assets/files/STUDENT-TRAVEL-GRANT.pdf" style="cursor: pointer;text-decoration: none;"
-					target="_blank">
-					<font color="#e95d00" style="font-size: 17px;margin-left: 67px;"><b>Student Travel Grant and
-							Accommodations</b></font>
-				</a>
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="./assets/files/STG_RECEIPIENTS_WEBSITE.pdf" style="cursor: pointer;text-decoration: none;"
-					target="_blank">
-					<font color="#24394d" style="font-size: 17px;"><b>List of Student Travel Grant
-							Receipients</b></font>
-				</a>
-				&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="./assets/files/BEST-PAPER-AWARDS.pdf" style="cursor: pointer;text-decoration: none;"
-					target="_blank">
-					<font color="#3f8f0" style="font-size: 17px;"><b>Best Paper Awards</b></font>
-				</a>
-			</marquee>
+		<!-- <p> -->
+		<marquee bgcolor="powderblue" onmouseover="this.stop();" onmouseout="this.start()"
+			style="padding-top: 6px;height: 36px;">
+			&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
+				<font color="blue"> 2024 IEEE SILCHAR SUBSECTION CONFERENCE</font>
+			</a>&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
+				<font color="red"> <b>at National Institute of Technology, Agartala</b></font>
+			</a>&nbsp;&nbsp;<a href="" style="pointer-events: none;cursor: default;">
+				<font color="blue"><b>Technical Co-Sponsorship: IEEE KolkataSection</b></font>
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./assets/files/STUDENT-TRAVEL-GRANT.pdf" style="cursor: pointer;text-decoration: none;"
+				target="_blank">
+				<font color="#e95d00" style="font-size: 17px;margin-left: 67px;"><b>Student Travel Grant and
+						Accommodations</b></font>
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./assets/files/STG_RECEIPIENTS_WEBSITE.pdf" style="cursor: pointer;text-decoration: none;"
+				target="_blank">
+				<font color="#24394d" style="font-size: 17px;"><b> List of
+						Student Travel Grant
+						Receipients</b></font>
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./assets/files/BEST-PAPER-AWARDS.pdf" style="cursor: pointer;text-decoration: none;"
+				target="_blank">
+				<font color="#3f8f0" style="font-size: 17px;"><b>Best Paper Awards</b></font>
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./assets/files/Overall Best & Trackwise Best Papers of IEEE SILCON 2024.pdf"
+				style="cursor: pointer;text-decoration: none;" target="_blank">
+				<font color="#3f8f0" style="font-size: 17px;"><b class="notification"> <span
+							class="new-notification">New</span> Overall
+						Best & Trackwise Best Papers</b></font>
+			</a>
+		</marquee>
 		</p>
 	</div>
 	<!--====  End of Banner  ====-->
