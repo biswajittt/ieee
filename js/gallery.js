@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img.alt = `Image ${i}`;
     img.classList.add("project-image", `image-${i}`);
     img.src = `${folderPath}${i}.jpg`; // Assuming images are named as image1.jpg, image2.jpg, etc.
+    img.loading = "lazy"; // Add lazy loading
 
     // Append the image to the container
     imageContainer.appendChild(img);
