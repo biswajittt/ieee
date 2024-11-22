@@ -58,22 +58,61 @@
 //   });
 // });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const imageContainer = document.getElementById("image-container");
+//   const totalImages = 50; // Total number of images in the folder
+//   const folderPath = "./assets/final_50/"; // Path to your images folder
+
+//   for (let i = 1; i <= totalImages; i++) {
+//     // Create a new image element
+//     const img = document.createElement("img");
+
+//     // Set the attributes to match your existing structure
+//     img.alt = `Image ${i}`;
+//     img.classList.add("project-image", `image-${i}`);
+//     img.src = `${folderPath}${i}.jpg`; // Assuming images are named as image1.jpg, image2.jpg, etc.
+//     img.loading = "lazy"; // Add lazy loading
+
+//     // Append the image to the container
+//     imageContainer.appendChild(img);
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const imageContainer = document.getElementById("image-container");
-  const totalImages = 50; // Total number of images in the folder
-  const folderPath = "./assets/final_50/"; // Path to your images folder
+  const totalImages = 50;
+  const folderPath = "./assets/final_50/";
+  const imagesPerPage = 10; // Number of images to load per batch
+  let loadedImages = 0;
 
-  for (let i = 1; i <= totalImages; i++) {
-    // Create a new image element
-    const img = document.createElement("img");
+  const loadImages = () => {
+    const start = loadedImages + 1;
+    const end = Math.min(start + imagesPerPage - 1, totalImages);
 
-    // Set the attributes to match your existing structure
-    img.alt = `Image ${i}`;
-    img.classList.add("project-image", `image-${i}`);
-    img.src = `${folderPath}${i}.jpg`; // Assuming images are named as image1.jpg, image2.jpg, etc.
-    img.loading = "lazy"; // Add lazy loading
+    for (let i = start; i <= end; i++) {
+      const img = document.createElement("img");
+      img.alt = `Image ${i}`;
+      img.classList.add("project-image", `image-${i}`);
+      img.src = `${folderPath}${i}.jpg`;
+      img.loading = "lazy";
+      imageContainer.appendChild(img);
+    }
+    loadedImages = end;
 
-    // Append the image to the container
-    imageContainer.appendChild(img);
-  }
+    if (loadedImages >= totalImages) {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.body.offsetHeight - 100
+    ) {
+      loadImages();
+    }
+  };
+
+  loadImages(); // Load initial images
+  window.addEventListener("scroll", handleScroll);
 });
