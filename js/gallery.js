@@ -78,41 +78,41 @@
 //   }
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const imageContainer = document.getElementById("image-container");
-  const totalImages = 50;
-  const folderPath = "/assets/final_50/";
-  const imagesPerPage = 10; // Number of images to load per batch
-  let loadedImages = 0;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const imageContainer = document.getElementById("image-container");
+//   const totalImages = 50;
+//   const folderPath = "assets/final_50/";
+//   const imagesPerPage = 10; // Number of images to load per batch
+//   let loadedImages = 0;
 
-  const loadImages = () => {
-    const start = loadedImages + 1;
-    const end = Math.min(start + imagesPerPage - 1, totalImages);
+//   const loadImages = () => {
+//     const start = loadedImages + 1;
+//     const end = Math.min(start + imagesPerPage - 1, totalImages);
 
-    for (let i = start; i <= end; i++) {
-      const img = document.createElement("img");
-      img.alt = `Image ${i}`;
-      img.classList.add("project-image", `image-${i}`);
-      img.src = `${folderPath}${i}.jpg`;
-      img.loading = "lazy";
-      imageContainer.appendChild(img);
-    }
-    loadedImages = end;
+//     for (let i = start; i <= end; i++) {
+//       const img = document.createElement("img");
+//       img.alt = `Image ${i}`;
+//       img.classList.add("project-image", `image-${i}`);
+//       img.src = `${folderPath}${i}.jpg`;
+//       img.loading = "lazy";
+//       imageContainer.appendChild(img);
+//     }
+//     loadedImages = end;
 
-    if (loadedImages >= totalImages) {
-      window.removeEventListener("scroll", handleScroll);
-    }
-  };
+//     if (loadedImages >= totalImages) {
+//       window.removeEventListener("scroll", handleScroll);
+//     }
+//   };
 
-  const handleScroll = () => {
-    if (
-      window.innerHeight + window.scrollY >=
-      document.body.offsetHeight - 100
-    ) {
-      loadImages();
-    }
-  };
+//   const handleScroll = () => {
+//     if (
+//       window.innerHeight + window.scrollY >=
+//       document.body.offsetHeight - 100
+//     ) {
+//       loadImages();
+//     }
+//   };
 
-  loadImages(); // Load initial images
-  window.addEventListener("scroll", handleScroll);
-});
+//   loadImages(); // Load initial images
+//   window.addEventListener("scroll", handleScroll);
+// });
